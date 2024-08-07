@@ -29,8 +29,9 @@ fetch("/shop/getProduct/" + localStorage.getItem('product')).then(response => {
         localStorage.setItem('productSize', "N/A")
         sizeLbl.style.display = "none"
         productSize.style.display = "none"
+        productQuantity.max = product.quantities[0]
     }
-    productQuantity.max = product.quantities[0]
+    
     productDescription.innerText = ((product.productDescription) ? product.productDescription + "\n" : "") +
         "Material: " + product.material
     console.log(productQuantity.max)
@@ -38,20 +39,21 @@ fetch("/shop/getProduct/" + localStorage.getItem('product')).then(response => {
         var exists = false;
         const shoppingCartInput = localStorage.getItem('shoppingCart')
         let shoppingCart = JSON.parse(shoppingCartInput)
+        var index = -1
         console.log(shoppingCart)
         shoppingCart.productList.forEach(x => {
             if (x.id == product.id) {
-                let index = shoppingCart.productList.indexOf(product)
                 shoppingCart.sizes.forEach(z => {
                     if (z == localStorage.getItem('productSize')) {
+                        index = shoppingCart.sizes.indexOf(z)
                         exists = true
                     }
                 })
             }
         })
-
+        
         if (exists) {
-            let index = shoppingCart.productList.indexOf(product)
+            console.log((parseInt(shoppingCart.quantity[index]) + parseInt(productQuantity.value))+" "+index)
             if ((parseInt(shoppingCart.quantity[index]) + parseInt(productQuantity.value)) <= productQuantity.max) {
                 shoppingCart.quantity[index] = parseInt(shoppingCart.quantity[index]) + parseInt(productQuantity.value)
                 alert("Added to shopping cart \n" + product.name + " qty: " + productQuantity.value)

@@ -65,6 +65,7 @@
 }
 
 .scroll {
+  margin-top: 10vh;
   height: 100vh;
   width: auto;
   background-color: #a8a484;

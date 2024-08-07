@@ -97,8 +97,8 @@ const update = (req, res, next) => {
 }
 
 const deleteProduct = (req, res, next) => {
-    let productId = req.body.productId
-    Product.findByIdAndRemove(productId)
+    let productId = req.params.productId
+    Product.findByIdAndDelete(productId)
         .then(() => {
             res.json({
                 message: `Product deleted successfully with id ${productId}`

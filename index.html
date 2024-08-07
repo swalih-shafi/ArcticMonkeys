@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arctic Monkeys</title>
+    <link rel="stylesheet" href="style/index.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Playwrite+FR+Moderne:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+  </head>
+  <body background="images/wallpaper.jpeg" style="object-fit: cover;">
+    <header>
+      <div class="navbar">
+        <div class="navbar-left">
+          <a href="/live">LIVE</a>
+          <a href="/shop">STORE</a>
+        </div>
+        <div class="logo">
+          <a href="/index"
+            ><img src="images/logo.png" alt="Arctic Monkeys"
+          /></a>
+        </div>
+        <div class="navbar-right">
+          <a href="/mail">MAIL</a>
+          <a href="/albums">ALBUMS</a>
+        </div>
+      </div>
+    </header>
+
+    <video id="background-video" autoplay loop muted>
+      <source src="style/home.mp4" type="video/mp4" />
+    </video>
+
+    <script>
+      function videoNoShow(){
+        document.getElementById("background-video").hidden = true;
+        title = document.getElementById("carTitle").style.backgroundColor = "white";        
+        title = document.getElementById("carTitle").style.color = "black";
+        title = document.getElementById("listenPrompt").style.backgroundColor = "white";
+        title = document.getElementById("listenPrompt").style.color = "black";
+      }
+      function videoShow(){
+        document.getElementById("background-video").hidden = false;
+        title = document.getElementById("carTitle").style.backgroundColor = "#00000000";
+        title = document.getElementById("carTitle").style.color = "white";
+        title = document.getElementById("listenPrompt").style.backgroundColor = "#00000000";
+        title = document.getElementById("listenPrompt").style.color = "white";
+      }
+    </script>
+
+    <div class="theCar">
+      <div id="carTitle">THE CAR</div>
+      <div id="carCover">
+        <img src="images/theCar.jpg" onmouseenter="videoShow()" onmouseleave="videoNoShow()" />
+      </div>
+      
+      <div id="listenPrompt">LISTEN NOW</div>
+
+    </div>
+
+    <div class="scroll">
+      <h2><a href="/shop">SHOP FOR MERCH</a></h2>
+      <div class="shopPreview">
+        <div class="product">
+          <div class="image"><a href="/shop"><img src='images/store/blackShirt.webp'></a></div>
+          <div class="title">TOUR POSTER</div>
+        </div>
+        <div class="product">
+          <div class="image"><a href="/shop"><img src='images/store/waveShirt.webp'></a></div>
+          <div class="title">TOUR POSTER</div>
+        </div>
+        <div class="product">
+          <div class="image"><a href="/shop"><img src='images/store/poster.webp'></a></div>
+          <div class="title">TOUR POSTER</div>
+        </div>
+        <div class="product">
+          <div class="image"><a href="/shop"><img src='images/store/photoShirt.webp'></a></div>
+          <div class="title">TOUR POSTER</div>
+        </div>
+        <div class="product">
+          <div class="image"><a href="/shop"><img src='images/store/carAlbum.webp'></a></div>
+          <div class="title">THE CAR LP</div>
+        </div>
+        <div class="product">
+          <div class="image"><a href="/shop"><img src='images/store/carCassette.webp'></a></div>
+          <div class="title">THE CAR CASSETTE</div>
+        </div>
+        <div class="product">
+          <div class="image"><a href="/shop"><img src='images/store/cd.webp'></a></div>
+          <div class="title">TOUR POSTER</div>
+        </div>
+      </div>
+      <div class="mail">
+        <a href="/mail"><button id="mail" >SUBSCRIBE TO NEWSLETTER</button></a>
+      </div>  
+    </div>
+
+    <footer>
+      <div class="footer">
+        <div class="about">
+          <a href="/devs">DEVS</a>
+        </div>
+        <div class="center">
+          <p>ARCTIC MONKEYS 2024 &copy; | <a href="https://arcticmonkeys.com/privacy-policy">Privacy Policy</a></p>
+        </div>
+        <div class="social">
+          <a href="https://www.facebook.com/ArcticMonkeys/"><ion-icon name="logo-facebook"></ion-icon> </a>
+          <a href="https://x.com/arcticmonkeys"><ion-icon name="logo-twitter"></ion-icon> </a>
+          <a href="https://www.instagram.com/arcticmonkeys/"><ion-icon name="logo-instagram"></ion-icon> </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

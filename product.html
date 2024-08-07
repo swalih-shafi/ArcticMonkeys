@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arctic Monkeys</title>
+  <link rel="stylesheet" href="style/shirt.css" />
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Playwrite+FR+Moderne:wght@100..400&display=swap"
+    rel="stylesheet" />
+  <script>
+    function renewQuantity() {
+      console.log("updating quantity" + productSize.selectedIndex)
+      var selectBox = document.getElementById("productSize");
+      productQuantity.max = selectBox.options[selectBox.selectedIndex].value
+      localStorage.setItem('productSize',selectBox.options[selectBox.selectedIndex].innerText)
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <div class="navbar-left">
+        <a href="/live">LIVE</a>
+        <a href="/shop">STORE</a>
+      </div>
+      <div class="logo">
+        <a href="/index"><img src="images/logo.png" alt="Arctic Monkeys" /></a>
+      </div>
+      <div class="navbar-right">
+        <a href="/mail">MAIL</a>
+        <a href="/albums">ALBUMS</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="photo">
+      <img src="images/store/distort.webp" id="productImg" />
+    </div>
+    <div class="details">
+      <h1 id="productName" data-id="">DISTORTED PHOTO TEE</h1>
+      <div class="price" id="productPrice">AED 60.00</div>
+      <label id="sizeLbl">Size
+        <select id="productSize" onchange="renewQuantity()">
+          <option value=""></option>
+        </select>
+      </label>
+      <label id="productQuantityLbl">Quantity</label>
+      <input type="number" id="productQuantity" value="1" min="1" max="10" />
+      <button id="addToCart">ADD TO CART</button>
+      <p class="description" id="productDescription">Heavyweight Vintage Washed T-Shirt</p>
+    </div>
+  </div>
+  <script src="js/RenderProductDetails.js">
+
+  </script>
+  <footer>
+    <div class="footer">
+      <div class="center">
+        ARCTIC MONKEYS 2024 &copy; |
+        <a href="https://arcticmonkeys.com/privacy-policy">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

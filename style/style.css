@@ -1,0 +1,85 @@
+body {
+  background-color: #a8a484;
+  padding: 0px;
+  font-family: "Lexend Exa", sans-serif;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1d1c16;
+  padding: 10px;
+}
+.navbar-left,
+.navbar-right {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: space-around;
+}
+.navbar-left {
+  justify-content: flex-end;
+}
+.navbar-right {
+  justify-content: flex-start;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 35px;
+  margin-right: 35px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.navbar .logo {
+  display: flex;
+  justify-content: center;
+  margin: 0 40px;
+}
+.navbar .logo img {
+  height: 50px;
+}
+.navbar a:hover{
+  color: rgb(200, 203, 196);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 10px 20px;
+  border-top: 1px solid #444;
+  color: white;
+  text-decoration: none;
+}
+.footer .about, .footer .social {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.footer a{
+  text-decoration: none;
+  color: white;
+}
+.footer .social a {
+  margin: 10px;
+  color: white;
+  text-decoration: none;
+}
+.footer .social a img {
+  width: 24px;
+  height: 24px;
+}
+.footer .center {
+  text-align: center;
+  flex-grow: 1;
+}
+.footer .center p {
+  margin: 0;
+  font-size: 14px;
+}
+.footer a:hover{
+  color: rgb(200, 203, 196);
+}

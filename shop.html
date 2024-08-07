@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arctic Monkeys</title>
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="stylesheet" href="style/store.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Playwrite+FR+Moderne:wght@100..400&display=swap"
+    rel="stylesheet" />
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</head>
+
+<body onload="initializeCart()">
+  <header>
+    <div class="navbar" style="background-color: #a8a484">
+      <div class="navbar-left">
+        <a href="live">LIVE</a>
+        <a href="shop">STORE</a>
+      </div>
+      <div class="logo">
+        <a href="index"><img src="images/logo.png" alt="Arctic Monkeys" /></a>
+      </div>
+      <div class="navbar-right">
+        <a href="mail">MAIL</a>
+        <a href="albums">ALBUMS</a>
+        <a href="/cart"><ion-icon name="cart-outline"></ion-icon></a>
+      </div>
+    </div>
+  </header>
+  <input type="hidden" id="shoppingCart" value="test"/>
+  <div class="bar grid" id="topBar" value="0">
+    <div><button class="button" id="previousBtn">&lt;</button></div>
+    <div><label>Page: </label><label id="pageLbl" data-page="0">0/0</label></div>
+    <div>
+      <button class="button" id="nextBtn">&gt;</button>
+    </div>
+  </div>
+  <br />
+  <div id="productBody">
+    <div class="grid">
+      <div class="item">
+        <img src="images/store/distort.webp" />
+        <h3>CLASSIC T-SHIRT</h3>
+        <div class="price">AED 60.00</div>
+      </div>
+      <div class="item">
+        <img src="images/store/blackShirt.webp" />
+        <h3>DISTORTED T-SHIRT</h3>
+        <div class="price">AED 75.00</div>
+      </div>
+      <div class="item">
+        <img src="images/store/photoShirt.webp" />
+        <h3>BAND PHOTO T-SHIRT</h3>
+        <div class="price">AED 90.00</div>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="item">
+        <img src="images/store/waveShirt.webp" />
+        <h3>A.M T-SHIRT</h3>
+        <div class="price">AED 75.00</div>
+      </div>
+      <div class="item">
+        <img src="images/store/hoodie.webp" />
+        <h3>BAND TOUR HOODIE</h3>
+        <div class="price">AED 90.00</div>
+      </div>
+      <div class="item">
+        <img src="images/store/poster.webp" />
+        <h3>TOUR POSTER</h3>
+        <div class="price">AED 30.00</div>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="item">
+        <img src="images/store/carAlbum.webp" />
+        <h3>'THE CAR' LP</h3>
+        <div class="price">AED 110.00</div>
+      </div>
+      <div class="item">
+        <img src="images/store/cd.webp" />
+        <h3>'THE CAR' CD</h3>
+        <div class="price">AED 35.00</div>
+      </div>
+      <div class="item">
+        <img src="images/store/carCassette.webp" />
+        <h3>'THE CAR CASSETTE'</h3>
+        <div class="price">AED 30.00</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer">
+      <div class="about">
+        <a href="/devs">DEVS</a>
+      </div>
+      <div class="center">
+        <p>
+          ARCTIC MONKEYS 2024 &copy; |
+          <a href="https://arcticmonkeys.com/privacy-policy">Privacy Policy</a>
+        </p>
+      </div>
+      <div class="social">
+        <a href="https://www.facebook.com/ArcticMonkeys/"><ion-icon name="logo-facebook"></ion-icon> </a>
+        <a href="https://x.com/arcticmonkeys"><ion-icon name="logo-twitter"></ion-icon> </a>
+        <a href="https://www.instagram.com/arcticmonkeys/"><ion-icon name="logo-instagram"></ion-icon> </a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/RenderProducts.js"></script>
+  <script>
+    let shoppingCart = document.getElementById('shoppingCart')
+    console.log(shoppingCart)
+    function initializeCart() {
+      if (localStorage.getItem('shoppingCart')==null) {
+        let shoppingCartJSON = {
+          productList: [],
+          sizes: [],
+          quantity: []
+        }
+        localStorage.setItem('shoppingCart',JSON.stringify(shoppingCartJSON))
+      }
+    }
+  </script>
+</body>
+
+
+</html>

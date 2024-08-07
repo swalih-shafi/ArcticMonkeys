@@ -1,0 +1,41 @@
+.devs {
+  display: flex;
+  width: 70%;
+  justify-content: space-evenly;
+  margin: auto;
+}
+
+.devs img {
+  height: 300px;
+  border: 5px solid black;
+}
+
+.mahmoud, .swalih {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 35%;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.bio {
+    font-size: 14px;
+    padding: 1vh;
+}
+
+h1 {
+  padding: 2vh;
+}
+
+.footer {
+  background-color: #a8a484;
+  position: fixed;
+  bottom: 0;
+  width: 98vw;
+  border: none;
+  color: black;
+}

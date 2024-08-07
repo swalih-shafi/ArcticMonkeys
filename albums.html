@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arctic Monkeys</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/albums.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Playwrite+FR+Moderne:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="navbar-left">
+          <a href="/live">LIVE</a>
+          <a href="/shop">STORE</a>
+        </div>
+        <div class="logo">
+          <a href="/index"
+            ><img src="images/logo.png" alt="Arctic Monkeys"
+          /></a>
+        </div>
+        <div class="navbar-right">
+          <a href="/mail">MAIL</a>
+          <a href="/albums">ALBUMS</a>
+        </div>
+      </div>
+    </header>
+
+    <div id="pages">
+      <section id="one">
+        <div class="album">
+          <div class="title"><a href="https://open.spotify.com/album/2GROf0WKoP5Er2M9RXVNNs?si=Y8QqYAB6TEChmr60HgXmcw">THE CAR</a></div>
+          <div class="cover">
+            <img src="images/albums/car.webp" />
+          </div>
+          <div class="list" id="listOne"></div>
+        </div>
+      </section>
+      <section id="two">
+        <div class="album">
+          <div class="title"><a href="https://open.spotify.com/album/78bpIziExqiI9qztvNFlQu?si=0WI_okQ4Rra9suasdoJUFg">AM</a></div>
+          <div class="cover">
+            <img src="images/albums/am.jpg" />
+          </div>
+          <div class="list" id="listTwo"></div>
+        </div>
+      </section>
+      <section id="three">
+        <div class="album">
+          <div class="title"><a href="https://open.spotify.com/album/5IEoiwkThhRmSMBANhpxl2?si=-7UcZgrCST2frDGaLqCMbQ">HUMBUG</a></div>
+          <div class="cover">
+            <img src="images/albums/humbug.webp" />
+          </div>
+          <div class="list" id="listThree"></div>
+        </div>
+      </section>
+      <section id="four">
+        <div class="album">
+          <div class="title" id="night"><a href="https://open.spotify.com/album/1XkGORuUX2QGOEIL4EbJKm?si=fbp2JOr1SY2BYpuol7KnIA">FAVORITE<br />WORST<br />NIGHTMARE</a></div>
+          <div class="cover">
+            <img src="images/albums/nightmare.webp" />
+          </div>
+          <div class="list" id="listFour"></div>
+        </div>
+      </section>
+      <section id="five">
+        <div class="album">
+          <div class="title" id="wtv"><a href="https://open.spotify.com/album/50Zz8CkIhATKUlQMbHO3k1?si=rJTpUXnaRieL8GycQSdscQ">
+            WHATEVER PEOPLE <br />
+            SAY I AM, <br />
+            THATS WHAT <br />
+            I'M NOT</a>
+          </div>
+          <div class="cover">
+            <img src="images/albums/wtv.jpg" />
+          </div>
+          <div class="list" id="listFive"></div>
+        </div>
+      </section>
+    </div>
+    <script>
+      function list(albumName, listId) {
+        var req = new XMLHttpRequest();
+        req.open("GET", "json/songs.json", true);
+
+        req.onload = function () {
+          var albums = JSON.parse(req.responseText);
+          var album = albums.find((a) => a["album-name"] === albumName);
+
+          var list = document.getElementById(listId);
+          var ul = document.createElement("ul");
+
+          album.songs.forEach((name) => {
+            var li = document.createElement("li");
+            li.textContent = name.song;
+            ul.appendChild(li);
+          });
+
+          list.appendChild(ul);
+        };
+        req.send();
+      }
+
+      // Call the function for each album
+      list("The Car", "listOne");
+      list("AM", "listTwo");
+      list("Humbug", "listThree");
+      list("Favorite Worst Nightmare", "listFour");
+      list("Whatever People Say I Am, That's What I'm Not", "listFive");
+    </script>
+  </body>
+</html>

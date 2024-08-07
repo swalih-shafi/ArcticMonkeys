@@ -1,0 +1,158 @@
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.theCar {
+  margin: auto;
+  margin-top: 25vh;
+  margin-bottom: 25vh;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.theCar #carCover {
+  margin: 0;
+  padding: 0;
+  height: 40vh;
+  align-items: center;
+}
+
+.theCar img {
+  height: 100%;
+  width: auto;
+  margin: 0;
+}
+
+.theCar img:hover {
+  filter: brightness(50%);
+}
+
+#carTitle {
+  background-color: white;
+  margin: auto;
+  font-size: 42px;
+  align-items: center;
+  justify-content: center;
+  height: 24vh;
+  width: 50vw;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 16vh;
+  padding-bottom: 0;
+}
+
+#listenPrompt {
+  background-color: white;
+  margin: auto;
+  font-size: 40px;
+  align-items: center;
+  justify-content: center;
+  height: 24vh;
+  width: 50vw;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 16vh;
+  padding-bottom: 0;
+}
+
+.scroll {
+  height: 100vh;
+  width: auto;
+  background-color: #a8a484;
+}
+
+h2 {
+  padding: 4vh 3vh;
+  padding-bottom: 0;
+}
+
+.shopPreview {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding-bottom: 4vh;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.product img {
+  background-color: #98977a;
+  margin: 3vh;
+  height: 300px;
+}
+.product img:hover {
+  filter:brightness(95%)
+}
+
+h2 a {
+  text-decoration: none;
+  color: black;
+  margin-left: 1vw;
+}
+
+h2 a:hover{
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.mail {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin: 0;
+  justify-content: center;
+  margin-top: 10vh;
+}
+
+#mail {
+  border: none;
+  background-color: black;
+  color: white;
+  height: 8vh;
+  width: 60vh;
+  font-size: 18px;
+  transition: 0.2s ease;
+}
+
+#mail:hover {
+  color: #98977a;
+}
+
+
+.shopPreview::-webkit-scrollbar {
+  width: 4px;
+}
+
+.shopPreview::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.shopPreview::-webkit-scrollbar-thumb {
+  background: #98977abb;
+}
+
+.shopPreview::-webkit-scrollbar-thumb:hover {
+  background: #00000080;
+}

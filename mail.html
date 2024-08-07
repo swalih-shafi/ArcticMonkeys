@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arctic Monkeys</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/mail.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Playwrite+FR+Moderne:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      function clearForm() {
+        document.getElementById("firstName").value = "";
+        document.getElementById("lastName").value = "";
+        document.getElementById("email").value = "";
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="navbar-left">
+          <a href="/live">LIVE</a>xzx
+          <a href="/shop">STORE</a>
+        </div>
+        <div class="logo">
+          <a href="/index"
+            ><img src="images/logo.png" alt="Arctic Monkeys"
+          /></a>
+        </div>
+        <div class="navbar-right">
+          <a href="/mail">MAIL</a>
+          <a href="/albums">ALBUMS</a>
+        </div>
+      </div>
+    </header>
+
+    <h1 align="center">GET THE LATEST NEWS</h1>
+    <br />
+    <div class="form">
+      <label
+        >First Name: <br /><input
+          type="text"
+          placeholder="First Name"
+          id="firstName"
+      /></label>
+      <label
+        >Last Name: <br /><input
+          type="text"
+          placeholder="Last Name"
+          id="lastName"
+      /></label>
+      <label
+        >Email: <br /><input
+          type="email"
+          placeholder="example@gmail.com"
+          id="email"
+      /></label>
+      <button type="submit" onclick="clearForm()">JOIN THE MAILING LIST</button>
+      <p>
+        By subscribing to the mailing list you agree to the terms of use of the
+        Arctic Monkeys' Newsletter. This site is (not) protected by reCAPTCHA
+        and the Google privacy policy and terms of service apply.
+      </p>
+    </div>
+    <script src="js/mail.js"></script>
+    <br />
+    <footer>
+      <div class="footer">
+        <div class="center">
+          ARCTIC MONKEYS 2024 &copy; |
+          <a href="https://arcticmonkeys.com/privacy-policy">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

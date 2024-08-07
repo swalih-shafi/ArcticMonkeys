@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arctic Monkeys</title>
+    <link rel="stylesheet" href="style/live.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Playwrite+FR+Moderne:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="navbar-left">
+          <a href="/live">LIVE</a>
+          <a href="/shop">STORE</a>
+        </div>
+        <div class="logo">
+          <a href="/index"
+            ><img src="images/logo.png" alt="Arctic Monkeys"
+          /></a>
+        </div>
+        <div class="navbar-right">
+          <a href="/mail">MAIL</a>
+          <a href="/albums">ALBUMS</a>
+        </div>
+      </div>
+    </header>
+
+    <h1 align="center">LIVE CONCERTS</h1>
+    <br />
+    <h3 align="center">Next show in:</h3>
+    <div id="timer"></div>
+    <div id="details"></div>
+    <div id="list"></div>
+
+    <footer>
+      <div class="footer">
+        <div class="about">
+          <a href="devs">DEVS</a>
+        </div>
+        <div class="center">
+          <p>ARCTIC MONKEYS 2024 &copy;</p>
+        </div>
+        <div class="social">
+          <a href="https://www.facebook.com/ArcticMonkeys/"><ion-icon name="logo-facebook"></ion-icon> </a>
+          <a href="https://x.com/arcticmonkeys"><ion-icon name="logo-twitter"></ion-icon> </a>
+          <a href="https://www.instagram.com/arcticmonkeys/"><ion-icon name="logo-instagram"></ion-icon> </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      var req = new XMLHttpRequest();
+      req.open("GET", "/json/concerts.json", true);
+      console.log("shows")
+      req.onload = function() {
+          var concerts = JSON.parse(req.responseText);
+          var first = new Date(concerts[0].date);
+
+          function updateCountdown() {
+            var now = new Date();
+            var timeRemaining = first - now;
+            if (timeRemaining <= 0) {
+              document.getElementById("timer").innerText =
+                "The concert is today!";
+              clearInterval(timerInterval);
+              return;
+            }
+
+            var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            var hours = Math.floor(
+              (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+            );
+            var minutes = Math.floor(
+              (timeRemaining % (1000 * 60 * 60)) / (1000 * 60)
+            );
+            var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            document.getElementById("timer").innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            document.getElementById("details").innerHTML = `<div>${concerts[0].stadium}, ${concerts[0].location}</div>`
+
+          }
+
+          updateCountdown();
+          var timerInterval = setInterval(updateCountdown, 1000);
+
+          var listDiv = document.getElementById("list");
+          concerts.forEach(function(x) {
+            var bubble = document.createElement("div");
+            bubble.className = "bubble";
+
+            var date = new Date(x.date).toLocaleDateString();
+            var stadium = x.stadium;
+            var location = x.location;
+
+            bubble.innerHTML = `
+              <div class="date">${date}</div>
+              <div class="stadium">${stadium}</div>
+              <div class="location">${location}</div>
+            `;
+            listDiv.appendChild(bubble);
+          });
+      };
+
+      req.send();
+    </script>
+  </body>
+</html>

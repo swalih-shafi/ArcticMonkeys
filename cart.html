@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arctic Monkeys</title>
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="stylesheet" href="style/cart.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Playwrite+FR+Moderne:wght@100..400&display=swap"
+    rel="stylesheet" />
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="navbar" style="background-color: #a8a484">
+      <div class="navbar-left">
+        <a href="/live">LIVE</a>
+        <a href="/shop">STORE</a>
+      </div>
+      <div class="logo">
+        <a href="/index"><img src="images/logo.png" alt="Arctic Monkeys" /></a>
+      </div>
+      <div class="navbar-right">
+        <a href="/mail">MAIL</a>
+        <a href="/albums">ALBUMS</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="cart-container">
+    <h1 align="center">YOUR CART</h1>
+
+    <div id="cart-items">
+      <div class="product headings">
+        <div class="image">PRODUCT</div>
+        <div class="title"></div>
+        <div class="price">PRICE</div>
+        <div class="quantity">QUANTITY</div>
+        <div class="total">TOTAL</div>
+      </div>
+    </div>
+
+    <div id="cartList">
+
+    </div>
+  </div>
+
+  <div class="subtotal">
+    <p>Subtotal: <label id="totalLbl"></label></p>
+    <button class="checkout" id="checkOut">CHECK OUT</button>
+  </div>
+  <script src="js/RenderCart.js"></script>
+  <footer>
+    <div class="footer">
+      <div class="center">
+        ARCTIC MONKEYS 2024 &copy; |
+        <a href="https://arcticmonkeys.com/privacy-policy">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

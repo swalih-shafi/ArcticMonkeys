@@ -1,0 +1,85 @@
+[
+    {
+      "album-name": "The Car",
+      "songs": [
+        {"song": "There'd Better Be A Mirrorball"},
+        {"song": "I Ain't Quite Who I Think I am"},
+        {"song": "Sculptures Of Anything Goes"},
+        {"song": "Jet Skis On The Moat"},
+        {"song": "Body Paint"},
+        {"song": "The Car"},
+        {"song": "Big Ideas"},
+        {"song": "Hello You"},
+        {"song": "Mr Schwartz"},
+        {"song": "Perfect Sense"}
+      ]
+    },
+    {
+      "album-name": "AM",
+      "songs": [
+        {"song": "Do I Wanna Know?"},
+        {"song": "R U Mine?"},
+        {"song": "One For The Road"},
+        {"song": "Arabella"},
+        {"song": "I Want It All"},
+        {"song": "No.1 Party Anthem"},
+        {"song": "Mad Sounds"},
+        {"song": "Fireside"},
+        {"song": "Why'd You Only Call Me When You're High?"},
+        {"song": "Snap Out Of It"},
+        {"song": "Knee Socks"},
+        {"song": "I Wanna Be Yours"}
+      ]
+    },
+    {
+      "album-name": "Humbug",
+      "songs": [
+        {"song": "My Propeller"},
+        {"song": "Crying Lightning"},
+        {"song": "Dangerous Animals"},
+        {"song": "Secret Door"},
+        {"song": "Potion Approaching"},
+        {"song": "Fire And The Thud"},
+        {"song": "Cornerstone"},
+        {"song": "Dance Little Liar"},
+        {"song": "Pretty Visitors"},
+        {"song": "The Jeweller's Hands"}
+      ]
+    },
+    {
+      "album-name": "Favorite Worst Nightmare",
+      "songs": [
+        {"song": "Brianstorm"},
+        {"song": "Teddy Picker"},
+        {"song": "D Is For Dangerous"},
+        {"song": "Balaclava"},
+        {"song": "Fluorescent Adolescent"},
+        {"song": "Only Ones Who Know"},
+        {"song": "Do Me A Favour"},
+        {"song": "This House Is A Circus"},
+        {"song": "If You Were There, Beware"},
+        {"song": "The Bad Thing"},
+        {"song": "Old Yellow Bricks"},
+        {"song": "505"}
+      ]
+    },
+    {
+      "album-name": "Whatever People Say I Am, That's What I'm Not",
+      "songs": [
+        {"song": "The View From The Afternoon"},
+        {"song": "I Bet You Look Good On The Dancefloor"},
+        {"song": "Fake Tales Of San Francisco"},
+        {"song": "Dancing Shoes"},
+        {"song": "You Probably Couldn't See For The Lights But You Were Staring Straight At Me"},
+        {"song": "Still Take You Home"},
+        {"song": "Riot Van"},
+        {"song": "Red Light Indicates Doors Are Secured"},
+        {"song": "Mardy Bum"},
+        {"song": "Perhaps Vampires Is A Bit Strong But..."},
+        {"song": "When The Sun Goes Down"},
+        {"song": "From The Ritz To The Rubble"},
+        {"song": "A Certain Romance"}
+      ]
+    }
+  ]
+  

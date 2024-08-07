@@ -1,0 +1,136 @@
+section {
+  height: 100vh;
+  margin: 0;
+  scroll-snap-align: start;
+  background-size: cover;
+  background-position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+.navbar {
+  width: 100%;
+  top: 0;
+  position: fixed;
+  z-index: 100;
+}
+
+#one {
+  background-image: url("../images/wallpapers/car.webp");
+  scroll-snap-type: y proximity;
+}
+
+#two {
+  background-image: url("../images/wallpapers/am.png");
+}
+
+#three {
+  background-image: url("../images/wallpapers/humbug.jpeg");
+}
+
+#four {
+  background-image: url("../images/wallpapers/nightmare.png");
+}
+
+#five {
+  background-image: url("../images/wallpapers/wtv.jpeg");
+}
+
+.album {
+  background-color: white;
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+
+.cover {
+  margin: 0;
+  padding: 0;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+}
+
+.album img {
+  height: 100%;
+  width: auto;
+  margin: 0;
+}
+
+
+.title {
+  background-color: white;
+  font-size: 48px;
+  height: 34vh;
+  width: 50vw;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.1s ease-in;
+}
+
+.title:hover {
+  font-weight: bold;
+}
+
+.list {
+  background-color: white;
+  font-size: 16px;
+  height: 50vh;
+  width: 53vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+li {
+  padding: 13px;
+  overflow: hidden;
+}
+
+li:hover {
+  font-weight: bold;
+}
+
+ul::-webkit-scrollbar {
+  width: 8px;
+}
+
+ul::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+ul::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#wtv,
+#night {
+  font-size: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
